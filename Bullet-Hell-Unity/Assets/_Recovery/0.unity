@@ -558,11 +558,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1184646181}
   - component: {fileID: 1184646180}
+  - component: {fileID: 1184646183}
   - component: {fileID: 1184646179}
   - component: {fileID: 1184646178}
   - component: {fileID: 1184646182}
-  - component: {fileID: 1184646183}
-  - component: {fileID: 1184646184}
   m_Layer: 0
   m_Name: Boss-Frog
   m_TagString: Untagged
@@ -622,7 +621,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -684,7 +683,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 5859455471658249610, guid: eb0518afc43d41a4f9845f4be90fff29, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -719,9 +718,9 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184646177}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
-  m_UseFullKinematicContacts: 1
+  m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
@@ -747,26 +746,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1184646177}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28f545588e2b20049b116814bab3c39e, type: 3}
+  m_Script: {fileID: 11500000, guid: 3bba461ab046c3c4684f2bb8511b13f3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RadialShooter
-  _shotPattern: {fileID: 11400000, guid: b32622e5192632e4f8d2e5933bf8c81a, type: 2}
---- !u!114 &1184646184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1184646177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 872cd06f4aec4a44e94518d7907e8770, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RadialShotPatternVisualizer
-  _pattern: {fileID: 11400000, guid: b32622e5192632e4f8d2e5933bf8c81a, type: 2}
-  _radius: 1
-  _color: {r: 0.9686275, g: 0.8588236, b: 0.20392159, a: 1}
-  _testTime: 3.21
+  m_EditorClassIdentifier: Assembly-CSharp::Shot
+  _shootCooldown: 0.5
+  _bulletSpeed: 10
+  _shotSettings:
+    NumberOfBullets: 5
+    BulletSpeed: 10
+    CooldownAfterShot: 0
 --- !u!1 &2085240164
 GameObject:
   m_ObjectHideFlags: 0
@@ -941,6 +929,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 049dd3309df549b40af288ffeb0f6473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  moveSpeed: 5
+  rb: {fileID: 0}
+  inputMovement: {x: 0, y: 0}
 --- !u!1001 &8007836058423071607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1004,8 +995,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
-  - {fileID: 1184646181}
   - {fileID: 8007836058423071607}
+  - {fileID: 1184646181}
   - {fileID: 460117223}
   - {fileID: 2085240169}
   - {fileID: 892465467}

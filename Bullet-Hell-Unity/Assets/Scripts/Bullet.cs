@@ -1,48 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private float bulletSpeed = 22f;
-    [SerializeField] private GameObject particleOnHitPrefabVFX;
-    [SerializeField] private bool isEnemyBullet = false;
-    [SerializeField] private float bulletRange = 10f;
+    private const float MAX_LIFE_TIME = 3f;
 
-    private Vector3 startPosition;
+    private float _lifeTime = 0f;
 
-    void Start()
+    public Vector2 Speed;
+
+    private void Update()
     {
-        startPosition = transform.position;
+        transform.position += (Vector3)Speed * Time.deltaTime;
     }
 
-    void Update()
+    private void Disable()
     {
-        MoveBullet();
-        DetectFireDistance();
+        _lifeTime = 0f;
+        gameObject.SetActive(false);
     }
-
-    public bool GetIsEnemyBullet()
-    {
-        return isEnemyBullet;
-    }
-
-    public void UpdateBulletRange(float bulletRange)
-    {
-        this.bulletRange = bulletRange;
-    }
-
-    public void UpdateBulletSpeed(float bulletSpeed)
-    {
-        this.bulletSpeed = bulletSpeed;
-    }
-
-    private void OnTriggerEnter2S(Collider2D other)
-    {
-        EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
-        Indestructible indestructible = 
-    }
-
-
-
 }
