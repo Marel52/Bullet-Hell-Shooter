@@ -4580,7 +4580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletPool
   _bossBulletPrefab: {fileID: 19031912105090825, guid: f3074d699b667f844bc3f74dd6bb18b4, type: 3}
-  _initialBossBulletCount: 150
+  _initialBossBulletCount: 300
   _expandBossBulletAmount: 20
   _playerBulletPrefab: {fileID: 905381095}
   _initialPlayerBulletCount: 50
@@ -4776,7 +4776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerShooter
   _shootCooldown: 0.2
-  _bulletSpeed: 30
+  _bulletSpeed: 60
   _shootPoint: {fileID: 319071617}
 --- !u!114 &925204320
 MonoBehaviour:
@@ -6834,7 +6834,7 @@ Animator:
   m_GameObject: {fileID: 1184646177}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 129239f3c6e1a3941b8a480b6e9e0560, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2f1349043ba2f7a4ea1e9dd23ba11b5f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -6983,6 +6983,11 @@ MonoBehaviour:
   _pattern3: {fileID: 11400000, guid: 584063bd67ace5546821e610a4fe4640, type: 2}
   _patternDuration: 10
   _transitionDelay: 0.5
+  _pattern2MoveSpeed: 50
+  _pattern2MoveRange: 80
+  _animator: {fileID: 0}
+  _idleAnimationName: Boss_Idle
+  _pattern2AnimationName: Boss_Pattern2
 --- !u!114 &1184646184
 MonoBehaviour:
   m_ObjectHideFlags: 0

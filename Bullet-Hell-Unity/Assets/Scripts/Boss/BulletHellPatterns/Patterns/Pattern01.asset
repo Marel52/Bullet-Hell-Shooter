@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ca17d1738af24478938597a92cd352, type: 3}
   m_Name: Pattern01
   m_EditorClassIdentifier: Assembly-CSharp::RadialShotPattern
-  Repetitions: 30
+  Repetitions: 40
   AngleOffsetBeetweenReps: 84
   StartWait: 0
   EndWait: 0

@@ -18,8 +18,8 @@ MonoBehaviour:
   EndWait: 0
   PatternSettings:
   - NumberOfBullets: 6
-    BulletSpeed: 40
-    CooldownAfterShot: 0.2
+    BulletSpeed: 50
+    CooldownAfterShot: 0.3
     SpawnRadius: 0
     PhaseOffset: 0
     AngleOffset: 0
@@ -27,11 +27,20 @@ MonoBehaviour:
     RadialMask: 1
     MaskAngle: 120
   - NumberOfBullets: 4
-    BulletSpeed: 47
-    CooldownAfterShot: 0.2
+    BulletSpeed: 57
+    CooldownAfterShot: 0.3
     SpawnRadius: 0.4
     PhaseOffset: 0
     AngleOffset: 30
     MirrorPattern: 1
     RadialMask: 1
     MaskAngle: 90
+  - NumberOfBullets: 7
+    BulletSpeed: 47
+    CooldownAfterShot: 0.3
+    SpawnRadius: 0.4
+    PhaseOffset: 0.3
+    AngleOffset: 30
+    MirrorPattern: 1
+    RadialMask: 1
+    MaskAngle: 180
